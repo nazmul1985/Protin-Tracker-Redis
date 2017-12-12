@@ -1,0 +1,25 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Leaderboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Leaderboard</h2>
+<table>
+    <thead>
+        <tr>
+            <td>User</td>
+            <td>Score</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var leader in @ViewBag.Leaders)
+        {
+            <tr>
+                <td>@leader.Key</td>
+                <td>@leader.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
